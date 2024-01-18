@@ -5,10 +5,10 @@
 # 이미지 경로 : https://i.pinimg.com/474x/34/8b/c5/348bc51a10af4a96dea207318f88cc6b.jpg
 import requests
 
-url = 'https://api.ocr.space/parse/imageurl?apikey=K83584363188957&url=https://i.pinimg.com/474x/34/8b/c5/348bc51a10af4a96dea207318f88cc6b.jpg&language=kor&isOverlayRequired=true'
+url = 'https://api.ocr.space/parse/imageurl?apikey=K83584363188957&url=https://thumb.mt.co.kr/06/2012/02/2012021613230156226_1.jpg/dims/optimize/&language=kor&isOverlayRequired=true'
 response = requests.get(url)
 response.raise_for_status()
 
 result = response.json()
 print(type(result))
-print(result['ParsedResults'][0]['ParsedText'])
+print(result['ParsedResults'][0]['ParsedText'], type(result['ParsedResults'][0]['ParsedText']))

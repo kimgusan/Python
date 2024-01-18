@@ -1,4 +1,4 @@
-from s_mysql.connection_module import *
+from connection_module import *
 
 
 @execute
@@ -7,8 +7,19 @@ def save(cursor: Cursor, query: str, params: tuple):
 
 
 @execute
+def save_many(cursor: Cursor, query: str, params: tuple):
+    cursor.executemany(query, params)
+
+
+@execute
 def find_all(cursor: Cursor, query: str) -> list:
     cursor.execute(query)
+    return cursor.fetchall()
+
+
+@execute
+def find_all_by(cursor: Cursor, query: str, params: tuple) -> list:
+    cursor.execute(query, params)
     return cursor.fetchall()
 
 
@@ -27,7 +38,6 @@ def update(cursor: Cursor, query: str, params: tuple):
 def delete(cursor: Cursor, query: str, params: tuple):
     cursor.execute(query, params)
 
-
 @execute
-def save_many(cursor: Cursor, query: str, params: tuple):
+def new_table(cursor: Cursor, query: str, params: tuple):
     cursor.execute(query, params)
