@@ -116,8 +116,7 @@
 #
 # select * from tbl_owner;
 # select * from tbl_pet;
-
-# 숙제
+숙제
 create table tbl_client(
     email varchar(255) primary key,
     password varchar(255) not null,
@@ -165,17 +164,25 @@ select * from tbl_reservation; #예약
 
 
 
+
+
+select a.* from  tbl_conference_room a, tbl_part_time b
+where a.id = b.conference_room_id
+join (select b.conference_room_id from tbl_part_time a, tbl_reservation b
+where a.conference_room_id = b.conference_room_id) c
+on c.conference_room_id <> a.id;
+
+select *from tbl_conference_room
+where id not in (select b.conference_room_id from tbl_conference_room a join tbl_reservation b
+group by b.id)
+
+
+
+
+
 # 회원가입
 # 회사 추가
 # 회의실 추가
 # 회의실마다 이용시간 시간 추가
 # 예약 추가
 # 회의실 전체 내용 조회(예약이 이미 완료된 회의실 시간은 보여지지 않는다.
-
-
-
-
-
-
-
-
