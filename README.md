@@ -710,3 +710,7 @@ open(path, 'r')
 ### generator expression
 
     (operate for variable in range(end))
+
+
+### 알고리즘?
+알고리즘 문제를 적용하는 방법에 대하여 공부하고 다시 확인합니다
