@@ -550,11 +550,11 @@ super().**init**(): 부모 생성자
 연산자 메소드 설명
 ───────────────────────────────────────────────────────
 
--        __add__(self, other)            덧셈
+-          __add__(self, other)            덧셈
 
-*        __mul__(self, other)            곱셈
+*          __mul__(self, other)            곱셈
 
--        __sub__(self, other)            뺄셈
+-          __sub__(self, other)            뺄셈
 
     / **truediv**(self, other) 나눗셈
     // **floordiv**(self, other) 몫
@@ -592,10 +592,10 @@ super().**init**(): 부모 생성자
     > len **len**(self) 요소 길이
     > str **str**(self) 문자열 표현
 
-            __init__                       생성자
-            __del__                        소멸자
-            __new__                        할당자
-            __repr__(self)              __str__을 정의하지 않을 경우, __repr__이 대신 쓰인다, 객체를 표현(객체의 주소)하는 목적으로 사용한다
+              __init__                       생성자
+              __del__                        소멸자
+              __new__                        할당자
+              __repr__(self)              __str__을 정의하지 않을 경우, __repr__이 대신 쓰인다, 객체를 표현(객체의 주소)하는 목적으로 사용한다
 
 ## 모듈
 
@@ -711,6 +711,8 @@ open(path, 'r')
 
     (operate for variable in range(end))
 
+---
 
-### 알고리즘?
-알고리즘 문제를 적용하는 방법에 대하여 공부하고 다시 확인합니다
+### 백준 알고리즘 문제 풀이
+
+-   zz_Algorithm_study 파일에 각 카테고리 별로 알고리즘 문제를 풀고 있습니다.
