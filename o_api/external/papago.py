@@ -6,7 +6,7 @@ import urllib.request
 import json
 
 client_id = "gHq247_MTSLVsgRUfvs8"
-client_secret = "cv52dDBP5P"
+client_secret = ""
 encoding_text = urllib.parse.quote("보고싶어, 사랑해")
 data = f"source=ko&target=en&text={encoding_text}"
 url = "https://openapi.naver.com/v1/papago/n2mt"
